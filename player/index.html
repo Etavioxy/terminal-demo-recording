@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terminal Demo Player</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <h1>Terminal Demo Player</h1>
+  <div class="file-list" id="file-list"></div>
+  <div id="player-container"></div>
+  <div class="controls">
+    <button onclick="setSpeed(0.5)">0.5x</button>
+    <button onclick="setSpeed(1)">1x</button>
+    <button onclick="setSpeed(2)">2x</button>
+    <button onclick="setSpeed(4)">4x</button>
+    <button id="skip-btn" onclick="toggleSkip()">Skip</button>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

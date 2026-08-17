@@ -1,0 +1,10 @@
+recordings/
+!recordings-demo/
+
+player/node_modules/
+player/dist/
+
+.claude-testing/
+.claude/
+**/__pycache__/
+*.pyc

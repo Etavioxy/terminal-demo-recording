@@ -1,0 +1,172 @@
+body {
+  background: #1a1a2e;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+h1 {
+  color: #e0e0e0;
+  margin-bottom: 16px;
+  font-size: 1.4em;
+}
+
+.controls {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+.controls button {
+  background: #16213e;
+  color: #e0e0e0;
+  border: 1px solid #0f3460;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background 0.2s;
+}
+
+.controls button:hover {
+  background: #0f3460;
+}
+
+.controls button.active {
+  background: #53a8b6;
+  border-color: #8bd3dd;
+  color: #0e1b2e;
+}
+
+#player-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  width: min(900px, 95vw);
+  min-height: 400px;
+}
+
+.file-list {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: min(900px, 95vw);
+}
+
+.selector-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.selector-label {
+  color: #8bd3dd;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.project-select {
+  background: #10182b;
+  border: 1px solid #2f4f8f;
+  color: #e0e0e0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  min-width: 220px;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pagination-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  background: #131b31;
+  border: 1px solid #0f3460;
+  border-radius: 6px;
+  color: #c9d6f0;
+  min-width: 32px;
+  height: 30px;
+  padding: 0 8px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.page-btn:hover:not(:disabled),
+.page-btn.active {
+  background: #0f3460;
+  border-color: #53a8b6;
+  color: #ffffff;
+}
+
+.page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.page-ellipsis {
+  color: #7f8db0;
+  font-size: 0.88em;
+}
+
+.pagination-info {
+  color: #8bd3dd;
+  font-size: 0.82em;
+  margin-left: 4px;
+}
+
+.cast-item {
+  background: #131b31;
+  border: 1px solid #0f3460;
+  border-radius: 8px;
+  padding: 8px 10px;
+  width: calc(33.333% - 6px);
+  min-width: 220px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 2px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.cast-name {
+  color: #8bd3dd;
+  font-size: 0.92em;
+  font-weight: 600;
+}
+
+.cast-meta {
+  color: #7f8db0;
+  font-size: 0.78em;
+}
+
+.cast-item:hover,
+.cast-item.active {
+  background: #0f3460;
+  border-color: #53a8b6;
+}
+
+.cast-item:hover .cast-name,
+.cast-item.active .cast-name {
+  color: #ffffff;
+}
+
+.cast-item:hover .cast-meta,
+.cast-item.active .cast-meta {
+  color: #c9d6f0;
+}
